@@ -39,7 +39,7 @@
   margin: auto;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 368px) {
   .image {
     max-width: 70%;
     height: auto;
