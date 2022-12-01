@@ -1,10 +1,20 @@
 // Questa è la pagina dinamica che contiene il singolo post selezionato
 
+import { Fragment } from "react";
+import Head from "next/head";
 import PostContent from "../../components/posts/single-post/post-content";
 import { getPostsFiles, getPostData } from "../../lib/posts-util";
 
 function SinglePostPage(props) {
-  return <PostContent post={props.post} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>{props.post.title}</title>
+        <meta name="description" content={props.post.excerpt} />
+      </Head>
+      <PostContent post={props.post} />;
+    </Fragment>
+  );
 }
 
 export function getStaticProps(context) {
