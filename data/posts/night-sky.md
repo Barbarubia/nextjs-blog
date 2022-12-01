@@ -19,7 +19,7 @@ isFeatured: true
 8. Compensazione
 
 ## Cast
-![Cast Night Sky](/images/posts/night-sky/cast.jpg)
+![Cast Night Sky](cast.jpg)
 - Sissy Spacek
 - J. K. Simmons
 - Chai Hansen

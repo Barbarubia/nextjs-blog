@@ -17,7 +17,7 @@ isFeatured: true
 6. Amor Fati
 
 ## Cast
-![Cast The Devil's Hour](/images/posts/the-devils-hour/cast.jpg)
+![Cast The Devil's Hour](cast.jpg)
 - Jessica Raine
 - Peter Capaldi
 - Nikesh Patel

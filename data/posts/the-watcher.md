@@ -18,7 +18,7 @@ La **famiglia Brannock** si trasferisce nella casa che ha sempre sognato, ma fin
 7. La maledizione
 
 ## Cast
-![Cast The Watcher](/images/posts/the-watcher/cast.jpg)
+![Cast The Watcher](cast.jpg)
 - Naomi Watts
 - Bobby Cannavale
 - Mia Farrow
