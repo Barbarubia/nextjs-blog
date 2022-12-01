@@ -2,21 +2,15 @@ import ReactMarkdown from "react-markdown";
 import PostHeader from "./post-header";
 import classes from "./post-content.module.css";
 
-const postData = {
-  title: "1899",
-  image: "1899.jpg",
-  date: "2022-11-30",
-  slug: "1899",
-  content: "# Questo è il contenuto dell'articolo scritto in formato Markdown",
-};
+function PostContent(props) {
+  const { post } = props;
 
-function PostContent() {
-  const imagePath = `/images/posts/${postData.slug}/${postData.image}`;
+  const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
   return (
     <article className={classes.content}>
-      <PostHeader title={postData.title} image={imagePath} />
-      <ReactMarkdown>{postData.content}</ReactMarkdown>
+      <PostHeader title={post.title} image={imagePath} />
+      <ReactMarkdown>{post.content}</ReactMarkdown>
     </article>
   );
 }
