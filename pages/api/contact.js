@@ -23,11 +23,10 @@ async function handler(req, res) {
     // se i dati sono ok vado avanti connettendomi al database MongoDB
     let client;
 
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.gcpvcae.mongodb.net/?retryWrites=true&w=majority`;
+
     try {
-      // TODO: sostituire "<NOME>" e "<PASSWORD>" con le credenziali del proprio database
-      client = await MongoClient.connect(
-        "mongodb+srv://<NOME>:<PASSWORD>@cluster0.gcpvcae.mongodb.net/?retryWrites=true&w=majority"
-      );
+      client = await MongoClient.connect(connectionString);
     } catch (error) {
       // Errore se non riesco a connettermi al database
       res.status(500).json({ message: "Impossibile connettersi al database." });
@@ -35,7 +34,7 @@ async function handler(req, res) {
     }
 
     // se la connessione al database avviene con successo proseguo
-    const db = client.db("nextjs-blog"); // imposto il nome del database (nextjs-blog in questo caso)
+    const db = client.db(`${process.env.mongodb_database}`);
 
     // creo nel database una collection con il nome di "messages" e inserisco all'interno della stessa i dati del messaggio (salvati in un oggetto "newMessage")
     const newMessage = {
